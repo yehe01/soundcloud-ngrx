@@ -16,7 +16,7 @@ $ npm start
 To Do
 -----
 
-- Remove cache in memory.
+[] Remove Minx.
 
 
 NPM Commands
