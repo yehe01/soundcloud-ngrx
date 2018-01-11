@@ -28,7 +28,7 @@ import { TracklistService } from './tracklist-service';
   ],
   imports: [
     RouterModule,
-    SharedModule,
+    SharedModule
   ],
   providers: [
     TracklistService

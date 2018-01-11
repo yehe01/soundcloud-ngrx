@@ -75,6 +75,12 @@ export class TrackCardComponent {
   }
 
   playTrack(): void {
-    this.player.selectOrPlay({trackId: this.track.id, tracklistId: this.tracklist.id});
+    this.player.player$.take(1).subscribe(player => {
+      if (this.track.id === player.trackId) {
+        this.player.play();
+      } else {
+        this.player.select({ trackId: this.track.id, tracklistId: this.tracklist.id });
+      }
+    });
   }
 }
